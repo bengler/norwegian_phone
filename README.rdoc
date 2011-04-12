@@ -1,0 +1,13 @@
+= No Phone
+== The Norwegian Phone Number Normalizer
+
+Attempts to ensure that there is only one way to write norwegian phone numbers.
+
+After normalization a norwegian phone number should be bare bones without
+national code (e.g. 90779024 if you entered +4790779024).
+
+International numbers should all be prefixed with a +.
+
+A number is considered to be international if it begins with + or 00 but not +47 or 0047.
+
+Lacking complete knowledge of the phone system this is based on common sense and especially for foregin phones there might be many ways to reach the same phone enabling a sneaky user to enter undetected duplicates.
