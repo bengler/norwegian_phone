@@ -11,3 +11,14 @@ International numbers should all be prefixed with a +.
 A number is considered to be international if it begins with + or 00 but not +47 or 0047.
 
 Lacking complete knowledge of the phone system this is based on common sense and especially for foregin phones there might be many ways to reach the same phone enabling a sneaky user to enter undetected duplicates.
+
+
+== Usage
+
+    gem install no_phone
+
+
+    require 'no_phone'
+    NoPhone.normalize "0047 (123) 45-678"
+    => "12345678"
+
