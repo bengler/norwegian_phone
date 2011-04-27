@@ -21,8 +21,12 @@ describe NoPhone, "#normalize" do
         NoPhone.normalize("+47123456789").should == "#{number}9"
       end
 
-      it "removes extraneous +signs" do
+      it "removes extraneous prepended +signs" do
         NoPhone.normalize("++4712345678").should == number
+      end
+
+      it "strips interspersed +signs" do
+        NoPhone.normalize("+47123+45+678").should == number
       end
     end
 
@@ -52,10 +56,15 @@ describe NoPhone, "#normalize" do
       NoPhone.normalize("(123)45678").should == number
     end
 
+
   end
 
   context "International numbers" do
     let(:number) { "+123456789" }
+
+    it "replaces 0 with +" do
+      NoPhone.normalize("0123456789").should == number
+    end
 
     it "replaces 00 with +" do
       NoPhone.normalize("00123456789").should == number
