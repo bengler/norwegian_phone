@@ -15,8 +15,18 @@ module NoPhone
     def msisdnize(number)
       number = normalize(number)
       number = "47#{number}" unless number =~ /^\+/
-      number.gsub!(/^\+/, '')
+        number.gsub!(/^\+/, '')
       number
+    end
+
+    def valid?(number)
+      return false if number.nil?
+      return false if number == ""
+      case number.strip
+      when /\A\+?[0-9[:space:]]+\z/
+        return true
+      end
+      false
     end
   end
 end
