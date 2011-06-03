@@ -9,3 +9,13 @@ describe NoPhone, "#msisdnize" do
     NoPhone.msisdnize("+123456789").should eq("123456789")
   end
 end
+
+describe NoPhone, "#unmsisdnize" do
+  it "localizes norwegian numbers" do
+    NoPhone.unmsisdnize("4712345678").should eq("12345678")
+  end
+
+  it "adds a + to international numbers" do
+    NoPhone.unmsisdnize("123456789").should eq("+123456789")
+  end
+end

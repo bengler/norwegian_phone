@@ -19,6 +19,10 @@ module NoPhone
       number
     end
 
+    def unmsisdnize(number)
+      normalize("+#{number}") if number
+    end
+
     def valid?(number)
       return false if number.nil?
       return false if number == ""
@@ -27,6 +31,11 @@ module NoPhone
         return true
       end
       false
+    end
+
+    # Norway-centric. True if not a norwegian number.
+    def international?(number)
+      !!(normalize(number) =~ /^\+/)
     end
   end
 end
