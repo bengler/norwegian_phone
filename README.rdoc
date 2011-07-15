@@ -19,6 +19,11 @@ Lacking complete knowledge of the phone system this is based on common sense and
 
 
     require 'no_phone'
-    NoPhone.normalize "0047 (123) 45-678"
+
+    class SomethingSpecial
+      extend NoPhone
+    end
+
+    SomethingSpecial.normalize "0047 (123) 45-678"
     => "12345678"
 
