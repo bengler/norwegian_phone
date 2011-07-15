@@ -12,6 +12,8 @@ module NoPhone
   end
 
   def msisdnize(number)
+    return nil if missing?(number)
+
     number = normalize(number)
     number = "47#{number}" unless number =~ /^\+/
       number.gsub!(/^\+/, '')
@@ -22,7 +24,7 @@ module NoPhone
     normalize("+#{number}") if number
   end
 
-  def valid?(number)
+  def number_valid?(number)
     return false if number.nil?
     return false if number == ""
     case number.strip
@@ -36,4 +38,9 @@ module NoPhone
   def international?(number)
     !!(normalize(number) =~ /^\+/)
   end
+
+  private
+    def missing?(number)
+      number.nil? || (number == "")
+    end
 end

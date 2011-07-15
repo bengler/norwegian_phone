@@ -1,6 +1,15 @@
 require 'spec_helper'
 
 describe NoPhone, "#msisdnize" do
+
+  it "ignores nils" do
+    NoPhoneWrapper.msisdnize(nil).should eq(nil)
+  end
+
+  it "ignores empty strings" do
+    NoPhoneWrapper.msisdnize("").should eq(nil)
+  end
+
   it "adds country code to naked norwegian-ish numbers" do
     NoPhoneWrapper.msisdnize("12345678").should eq("4712345678")
   end
