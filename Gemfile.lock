@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    no_phone (0.0.7)
+    norwegian_phone (0.0.8)
 
 GEM
   remote: http://rubygems.org/
@@ -20,5 +20,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  no_phone!
+  norwegian_phone!
   rspec

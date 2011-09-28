@@ -1,5 +1,6 @@
-= No Phone
-== The Norwegian Phone Number Normalizer
+= NorwegianPhone
+
+== Norwegian Phone Number Normalizer
 
 Attempts to ensure that there is only one way to write norwegian phone numbers.
 
@@ -21,7 +22,7 @@ Lacking complete knowledge of the phone system this is based on common sense and
     require 'no_phone'
 
     class SomethingSpecial
-      extend NoPhone
+      extend NorwegianPhone
     end
 
     SomethingSpecial.normalize "0047 (123) 45-678"

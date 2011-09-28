@@ -1,4 +1,4 @@
-module NoPhone
+module NorwegianPhone
 
   def normalize(number)
     number ||= ""

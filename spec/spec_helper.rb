@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require 'no_phone'
+require 'norwegian_phone'
 
-class NoPhoneWrapper
-  extend NoPhone
+class NorwegianPhoneWrapper
+  extend NorwegianPhone
 end
