@@ -15,6 +15,9 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "norwegian_phone"
 
   s.add_development_dependency('rspec')
+  s.add_development_dependency('rspec-extra-formatters')
+  s.add_development_dependency('simplecov')
+  s.add_development_dependency('simplecov-rcov')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

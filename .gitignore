@@ -4,3 +4,4 @@ pkg/*
 .rvmrc
 .rspec
 Gemfile.lock
+coverage
