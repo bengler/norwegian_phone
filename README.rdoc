@@ -28,3 +28,4 @@ Lacking complete knowledge of the phone system this is based on common sense and
     SomethingSpecial.normalize "0047 (123) 45-678"
     => "12345678"
 
+
