@@ -17,14 +17,13 @@ Lacking complete knowledge of the phone system this is based on common sense and
 == Usage
 
     gem install no_phone
-
-
     require 'no_phone'
 
-    class SomethingSpecial
-      extend NorwegianPhone
-    end
-
-    SomethingSpecial.normalize "0047 (123) 45-678"
+    NorwegianPhone.normalize "0047 (123) 45-678"
     => "12345678"
 
+    NorwegianPhone.number_valid?("0047 (123) 45-678")
+    => true
+
+    NorwegianPhone.international?("0047 (123) 45-678")
+    => false
