@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "norwegian_phone"
 
+  s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
   s.add_development_dependency('rspec-extra-formatters')
   s.add_development_dependency('simplecov')
