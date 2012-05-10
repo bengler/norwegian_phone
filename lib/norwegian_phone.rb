@@ -8,7 +8,6 @@ module NorwegianPhone
       number.gsub!(/^00/, '+')
       number.gsub!(/^\+47/, '')
       number.gsub!(/^\+*0+/, '+')
-      number.gsub!(/^47/, '') if number.size > 8
       number
     end
 

@@ -5,10 +5,6 @@ describe NorwegianPhone, "#normalize" do
     let(:number) { "12345678" }
 
     context "with country code" do
-      it "deletes prepended country code (47)" do
-        NorwegianPhone.normalize("4712345678").should == number
-      end
-
       it "deletes prepended 0047" do
         NorwegianPhone.normalize("004712345678").should == number
       end
@@ -31,6 +27,10 @@ describe NorwegianPhone, "#normalize" do
     end
 
     context "without country code" do
+      it "does not delete prepended country code (47)" do
+        NorwegianPhone.normalize("4712345678").should == '4712345678'
+      end
+
       it "leaves extra digits intact" do
         NorwegianPhone.normalize("123456789").should == "#{number}9"
       end
