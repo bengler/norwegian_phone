@@ -16,8 +16,8 @@ Lacking complete knowledge of the phone system this is based on common sense and
 
 == Usage
 
-    gem install no_phone
-    require 'no_phone'
+    gem install norwegian_phone
+    require 'norwegian_phone'
 
     NorwegianPhone.normalize "0047 (123) 45-678"
     => "12345678"
