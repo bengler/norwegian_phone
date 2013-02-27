@@ -1,5 +1,7 @@
 = NorwegianPhone
 
+[![Build Status](https://semaphoreapp.com/api/v1/projects/bffc3513f20de989aaff8a2a5b86e81ac198b56b/27946/badge.png)](https://semaphoreapp.com/projects/1559/branches/27946)
+
 == Norwegian Phone Number Normalizer
 
 Attempts to ensure that there is only one way to write norwegian phone numbers.
