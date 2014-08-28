@@ -27,7 +27,11 @@ module NorwegianPhone
     def number_valid?(number)
       return false if number.nil?
       return false if number == ""
-      return number.strip =~ /\A\+?[0-9 ]+\z/
+      case number.strip
+      when /\A\+?[0-9[:space:]]+\z/
+        return true
+      end
+      false
     end
 
     # Norway-centric. True if not a norwegian number.
